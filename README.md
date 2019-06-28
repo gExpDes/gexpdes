@@ -1,6 +1,6 @@
 # gexpdes
 
-Interface Gráfica para o Pacote ExpDes
+# Interface Gráfica para o Pacote ExpDes
 
 
 
