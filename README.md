@@ -26,18 +26,56 @@ Artigo do pacote publicado na Sigmae - [link](https://publicacoes.unifal-mg.edu.
 - Denismar Alves Nogueira
 
 # Instalação
-Para realizar a instalação do pacote gExpDes, execute os comandos 1 e 2 na sequência.
+Para realizar a instalação do pacote gExpDes, execute os passos 1 e 2 na sequência.
 
-## Para Linux
-### 1 - gExpDes
+
+## **Passo 1 - Instale os pacotes:**
+
+**shiny**
+install.packages("shiny",dependencies=TRUE)
+
+**shinythemes**
+install.packages("shinythemes",dependencies=TRUE)
+
+**ExpDes.pt**
+install.packages("ExpDes.pt",dependencies=TRUE)
+
+**rmarkdown**
+install.packages("rmarkdown",dependencies=TRUE)
+
+**plotly**
+install.packages("plotly",dependencies=TRUE)
+
+**xtable**
+install.packages("xtable",dependencies=TRUE)
+
+**nortest**
+install.packages("nortest",dependencies=TRUE)
+
+**car**
+install.packages("car",dependencies=TRUE)
+
+**pracma**
+install.packages("pracma",dependencies=TRUE)
+
+**stringr**
+install.packages("stringr",dependencies=TRUE)
+
+**ds**
+install.packages("ds",dependencies=TRUE)
+
+## **Passo 2 - Instale o pacote GExpDes e o labestData de acordo com o seu sistema operacional:**
+
+### Para Linux
+#### gExpDes
 install.packages("", repos  =  NULL)
-### 2- labestData
+#### labestData
 install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-17.458.tar.gz",repos = NULL)
 
-## Para Windows
-### 1 - gExpDes
+### Para Windows
+#### gExpDes
 install.packages("", repos  =  NULL)
-### 2- labestData
+#### labestData
 install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.17.458.zip",repos = NULL)
 
 Sobre o labestData, consultar [https://gitlab.c3sl.ufpr.br/pet-estatistica/labestData](https://gitlab.c3sl.ufpr.br/pet-estatistica/labestData)
@@ -51,21 +89,6 @@ Após instalar os pacotes, digite os comandos no R:
 **GExpDesView()**
 
 > Nota: A interface aparecerá após a execução do comando **GExpDesView()**
-## Pacotes que utilizamos no desenvolvimento do gExpDes
-
-- car
-- ds
-- ExpDes.pt
-- labestData
-- nortest
-- nortest
-- plotly
-- pracma
-- rmarkdown
-- shiny
-- shinythemes
-- stringr
-- xtable
 
 ## Sugestões e erros
 
