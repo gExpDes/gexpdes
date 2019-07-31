@@ -172,7 +172,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                      
                      # Input: Seleciona o separador ----
                      radioButtons("conj", "O Conjunto de dados analisados será obtido via:",
-                                  choices = c('Importação de arquivo .CSV' = "csv",
+                                  choices = c('Importação de arquivo' = "csv",
                                               'Dados das bibliotecas LabestData' = "labest"),
                                   selected = "csv"),
                      
@@ -580,7 +580,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                       ######################################################
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar3")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot3")),
+                        tabPanel("Análise de resíduos",          plotOutput("resid_plot3")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable3"))
                       )
                     )
