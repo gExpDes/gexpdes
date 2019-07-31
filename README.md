@@ -43,6 +43,7 @@ Sobre o labestData, consultar [https://gitlab.c3sl.ufpr.br/pet-estatistica/labes
 Após instalar os pacotes, digite os comandos no R:
 
 **require(gexpdes)**
+
 **GExpDesView()**
 
 > Nota: A interface aparecerá após a execução do comando **GExpDesView()**
@@ -64,11 +65,11 @@ Após instalar os pacotes, digite os comandos no R:
 
 ## Sugestões e erros
 
-Caso tenha alguma sugestão, pedimos que nos envie um e-mail (gexdes@gmail.com) ou abra uma *issue* no git.
+Caso tenha alguma sugestão, pedimos que nos envie um e-mail (gexpdes@gmail.com) ou abra uma *issue* no git.
 
 ## Colaborações
 
-Caso queira colaborar com o desenvolvimento do pacote, por favor, nos comunique via e-mail. (gexdes@gmail.com), pois será um prazer contar com a sua ajuda.
+Caso queira colaborar com o desenvolvimento do pacote, por favor, nos comunique via e-mail. (gexpdes@gmail.com), pois será um prazer contar com a sua ajuda.
 
 > **Nota:** Será um prazer contar com a sua colaboração.
 
