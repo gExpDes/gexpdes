@@ -2,7 +2,7 @@
 #  Copyright 2019 - Author(s):                       #
 ######################################################
 #                                                    #
-# Rogerio Kormann <rogerio.kormann@grad.ufsc.br>     #
+# Rogerio Kormann <rogerio.kormann@ufsc.br>     #
 # Eduardo Nunes Rosa - <eduardo.nunes@grad.ufsc.br>  #
 # Dr Crysttian Arantes Paixao - <crysttian@gmail.com>#
 #                                                    #
@@ -27,14 +27,14 @@ library(ds)
 #        ui - parte cliente do shiny                 #
 ######################################################
 ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = shinytheme("paper"),
-       
+
                 tabPanel
                 (
-                  ":", 
+                  ":",
                   sidebarLayout
                   (
                     sidebarPanel
-                    
+
                     ######################################################
                     #              scripts dos botoes avancar            #
                     ######################################################
@@ -42,7 +42,6 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                            Shiny.addCustomMessageHandler("myCallbackHandler",
                                            function(typeMessage) {console.log(typeMessage)
                                            if(typeMessage == 1){
-                                           console.log("got here");
                                            $("a:contains(Conjunto de dados)").click();
                                            }
                                            if(typeMessage == 2){
@@ -105,40 +104,46 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                            if(typeMessage == 22){
                                            $("a:contains(P)").click();
                                            }
+                                           if(typeMessage == 23){
+                                           $("a:contains(P)").click();
+                                           }
+                                           if(typeMessage == 24){
+                                           $("a:contains(Escolha da análise)").click();
+                                           }
 
                                            });
                                            ')),
-                     
+
                      ######################################################
                      # botao iniciar, fechar e seus alinhamentos em html  #
                      ######################################################
-                     
+
                      # Linha horizontal ----
                      tags$hr(),
-                     
-                     tags$div(align="center", 
+
+                     tags$div(align="center",
                               actionButton("action7", label="Iniciar a análise", class="btn btn-primary", icon= icon("angle-right"), width="75%")
                      ),
-                     
+
+                     #br(),
+                     #tags$div(align="center",
+                     #         actionButton("action5", label=" Ajuda", class="btn btn-primary", icon=icon("question-circle"), width="65%")
+                     #),
+
                      br(),
-                     tags$div(align="center", 
-                              actionButton("action5", label=" Ajuda", class="btn btn-primary", icon=icon("question-circle"), width="65%")
-                     ),
-                     
-                     br(),
-                     tags$div(align="center", 
+                     tags$div(align="center",
                               actionButton("fechar", label=" Fechar", class="btn btn-primary", icon=icon("power-off"), onclick = "setTimeout(function(){window.close();},500);", width="65%")
                      ),
-                     
+
                      # Linha horizontal ----
                      tags$hr()
 
                     ),
                     mainPanel(tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo3.png', width='560')),
-                              tags$div( align="center", 
-                                             HTML("2019 - Desenvolvido por:"),
+                              tags$div( align="center",
+                                             HTML("Ver. 1.0 - 2019 - Desenvolvido por:"),
                                              br(),
-                                             HTML("- Rogerio Kormann - rogerio.kormann@grad.ufsc.br"),
+                                             HTML("- Rogerio Kormann - rogerio.kormann@ufsc.br"),
                                              br(),
                                              HTML("- Eduardo Nunes Rosa - eduardo.nunes@grad.ufsc.br"),
                                              br(),
@@ -157,45 +162,45 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                              br()
                               ))
                     )
-                  
+
                   ),
-                
+
                 tabPanel
                 (
-                  "Conjunto de dados", icon=icon("arrow-up"), 
+                  "Conjunto de dados", icon=icon("arrow-up"),
                   sidebarLayout
                   (
                     sidebarPanel(
-                    
+
                      # Linha horizontal ----
                      tags$hr(),
-                     
+
                      # Input: Seleciona o separador ----
                      radioButtons("conj", "O Conjunto de dados analisados será obtido via:",
                                   choices = c('Importação de arquivo' = "csv",
                                               'Dados das bibliotecas LabestData' = "labest"),
                                   selected = "csv"),
-                     
+
                      # Linha horizontal ----
                      tags$hr(),
-                     
+
 
                      ######################################################
                      #     botao avancar e seus alinhamentos em html      #
                      ######################################################
                      tags$div(align="center", border="0",
-                              
+
                               actionButton("action11", label = "Avançar", class="btn btn-primary", icon= icon("angle-right"), width="100")
                      )
-                     
+
                     ),
                     mainPanel(tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo3.png', width='560'), br()),
                               br()
                     )
                     )
-                  
+
                   ),
-                
+
                 navbarMenu("Banco de Dados", icon=icon("arrow-up"),
                 tabPanel
                 (
@@ -203,12 +208,12 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   sidebarLayout
                   (
                     sidebarPanel
-                    
+
                     ######################################################
                     #              scripts dos botoes avancar            #
                     ######################################################
                     (
-                      
+
                       # Input: Seleciona o arquivo ----
                       fileInput("file1", "Escolha o arquivo CSV",
                                 multiple = FALSE,
@@ -217,31 +222,31 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                 accept = c("text/csv",
                                            "text/comma-separated-values,text/plain",
                                            ".csv")),
-                      
+
                       # Input: Seleciona o separador ----
                       radioButtons("sep", "Separador de valores",
                                    choices = c('Virgula' = ",",
                                                'Ponto e virgula' = ";",
                                                'Tabulação' = "\t"),
                                    selected = ";"),
-                      
+
                       # Input: Select  ----
                       radioButtons("dec", "Separador Decimal",
                                    choices = c('Ponto' = ".",
                                                "Virgula" = ","),
                                    selected = ','),
-                      
+
                       # Linha horizontal ----
                       tags$hr(),
-                      
-      
-                      
+
+
+
                       ######################################################
                       #     botao avancar e seus alinhamentos em html      #
                       ######################################################
-                      
+
                       tags$div(align="center",  border="0",
-                               actionButton("action7", label = "< Voltar", class="btn btn-primary", width="100"),
+                               actionButton("action1", label = "< Voltar", class="btn btn-primary", width="100"),
                                actionButton("action8", label = "Avançar >", class="btn btn-primary", width="100")
                       )
 
@@ -252,28 +257,31 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
-                  br()
-                  
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
                   ),
-                
+                  br()
+
+                  ),
+
                 tabPanel
                 (
                   "LABEST", icon=icon("arrow-up"),
-                  
+
                   sidebarLayout
                   (
-                    
+
                     sidebarPanel
                     (
                       htmlOutput("menu17"),
                       includeCSS("palatino.css"),
-                      
+
                       ######################################################
                       #     botao avancar e seus alinhamentos em html      #
                       ######################################################
                            tags$div(align="center",
-                               actionButton("action", label = "< Voltar", class="btn btn-primary", width="45%"),
-                               actionButton("action1", label = "Avançar >", class="btn btn-primary", width="45%")
+                               actionButton("action23", label = "< Voltar", class="btn btn-primary", width="45%"),
+                               actionButton("action24", label = "Avançar >", class="btn btn-primary", width="45%")
                            )
                     ),
                     mainPanel(uiOutput("TABLE_DOC"))
@@ -281,15 +289,18 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                          ),
                   br()
                 )
                 ),
-                
+
                 ######################################################
                 #              painel de escolha da analise          #
                 ######################################################
                 tabPanel
-                ( 
+                (
                   "Escolha da análise", icon=icon("check-circle"),
                   sidebarLayout
                   (
@@ -297,14 +308,14 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                     (
                       tags$form(id="formulario", action="dados",
                                 # Input: Seleciona o Delineamento ----
-                                
-                                selectInput("deli", label = "Selecione o Delineamento", 
+
+                                selectInput("deli", label = "Selecione o Delineamento",
                                              choices = c('DIC' = "dic",
                                                          'DBC' = "dbc",
                                                          'DQL' = "dql",
                                                          'Faixas' = "faixas",
-                                                         'Fat duplo com um trat. ad. DBC' = "fat2addbc",
-                                                         'Fat duplo com um trat. ad. DIC' = "fat2addic",
+                                                         'Fatorial duplo com um tratamento adicional DBC' = "fat2addbc",
+                                                         'Fatorial duplo com um tratamento adicional DIC' = "fat2addic",
                                                          'Fatorial duplo em DBC' = "fat2dbc",
                                                          'Fatorial duplo em DIC' = "fat2dic",
                                                          'Fatorial triplo com um tratamento adicional em DBC' = "fat3addbc",
@@ -314,115 +325,134 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                          'Parcelas subdivididas em DBC' = "psub2dbc",
                                                          'Parcelas subdivididas em DIC' = "psub2dic"),
                                              selected = "dic"),
-                                
-                                
+
+
                                 htmlOutput("menu"), htmlOutput("menu9"),
                                 htmlOutput("menu7"), htmlOutput("menu10"), htmlOutput("menu8"), htmlOutput("menu11"), htmlOutput("menu15"), htmlOutput("menu16"),
                                 htmlOutput("menu1"), htmlOutput("menu2"), htmlOutput("menu3"), htmlOutput("menu4"), htmlOutput("menu14"),
-                                htmlOutput("menu12"), htmlOutput("menu13"), htmlOutput("linear"), htmlOutput("linear1"),
+                                htmlOutput("menu13"), htmlOutput("menu18"), htmlOutput("menu19"), htmlOutput("menu20"), htmlOutput("linear"), htmlOutput("linear1"),
                                 tags$hr(),
 
-                                tags$div(align="center",  
+                                tags$div(align="center",
                                          actionButton("action", label = "< Voltar", class="btn btn-primary", width="100"),
                                          actionButton("action2", label = "Avançar >", class="btn btn-primary", width="100")
                                 )
                       )
-                      
+
                     ),
-                    
+
                     ######################################################
                     #    impressao da estrutura dos dados                #
                     ######################################################
                     mainPanel(
                       tabsetPanel(
-                         tabPanel("Estrutura",         verbatimTextOutput("structure"))
+                         tabPanel("Estrutura",  verbatimTextOutput("structure"), verbatimTextOutput("structure1"))
                          )
                       )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 #                   analise em dic                  #
                 ######################################################
                 navbarMenu("Delineamentos", icon=icon("bars"),
                 tabPanel
-                ( 
+                (
                   "ANAVA DIC", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'dic'",
                     sidebarPanel
                     (
-                      # Input: Seleciona o teste de comparacao multipla ----
+                      # Input: Seleciona o teste de comparacao múltipla ----
                       htmlOutput("testecomparacao"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF", "Significância a ser adotada pelo teste F: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       # Input: Seleciona o teste de homogeneidade ----
                       htmlOutput("homogeneidade"),
-                      
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigT", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigT", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action3", label = "< Voltar", class="btn btn-primary", width="50%")
                       ),
-                      
-                      br()
-                      
+                      br(),
+                      ######################################################
+                      #botao para imprimir valores no formato escolhido DIC#
+                      ######################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportDIC')
+                     )
+
+
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #              painel de impressao do dic            #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'dic'",
                       htmlOutput("uidicmodelos")
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 #                analise em dbc                      #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "ANAVA DBC", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'dbc'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp1", "Selecione o teste de comparacao multipla:",
+
+                      radioButtons("mcomp1", "Selecione o teste de comparacao múltipla:",
                                    choices = c('Tukey' = "lsd",
                                                'Duncan' = "duncan",
                                                'SNK' = "snk",
                                                'Calinski e Corsten' = "ccf",
                                                'Scott-Knott' = "sk"),
                                    selected = "lsd"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF1", "Significancia a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF1", "Significância a ser adotada pelo teste F: ", "0.05"),
 
                       # Input: Seleciona o teste de hipotese ----
                       radioButtons("hvar1", "Selecione o teste de homogeneidade de variancias:",
@@ -430,11 +460,11 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Ascombe e Tukey' = "anscombetukey",
                                                'ONeill e Mathews' = "oneillmathews"),
                                    selected = "oneillmathews"),
-                      
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigT1", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
+
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigT1", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
 
                       htmlOutput("menu5"),
                       htmlOutput("menu6"),
@@ -443,46 +473,57 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action4", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
-                      
+                      ),
+                      br(),
+                      ######################################################
+                      #botao para imprimir valores no formato escolhido DBC#
+                      ######################################################
+
+
+                      radioButtons('format', 'Formato do documento', c( 'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportDBC')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #              painel de impressao do dbc            #
                       ######################################################
-                      tabsetPanel(
-                      tabPanel("Box Plot",           plotlyOutput("plotar")),
-                      tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot1")),
-                      tabPanel("ANAVA",       verbatimTextOutput("anovatable1"))
-                      )
+                      conditionalPanel(condition = "input.deli == 'dbc'",
+                      htmlOutput("uidbcmodelos")
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 #                analise dql                         #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "ANAVA DQL", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'dql'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp2", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp2", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -490,61 +531,76 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
+                                   selected = "tukey"),
 
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigF2", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigT2", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigF2", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigT2", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
-                      
+                      ),
+                      br(),
+                      ######################################################
+                      #botao para imprimir valores no formato escolhido DQL#
+                      ######################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportDQL')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #              painel de impressao dql               #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'dql'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar2")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot2")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot2")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable2"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 #                analise faixas                      #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "F", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'faixas'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp3", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp3", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -552,61 +608,77 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigF3", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigT3", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigF3", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigT3", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
-                               actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
 
+                      tags$div(align="left",
+                               actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
+                      ),
+                      br(),
+
+                      #########################################################
+                      #botao para imprimir valores no formato escolhido FAIXAS#
+                      #########################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportFAIXAS')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #              painel de impressao faixas            #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'faixas'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar3")),
-                        tabPanel("Análise de resíduos",          plotOutput("resid_plot3")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot3")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable3"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 # analise fat duplo com 1 trat adicional em DBC      #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "G", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'fat2addbc'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp4", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp4", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -614,62 +686,77 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigF4", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigT4", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigF4", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigT4", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
-                      
+                      ),
+                      br(),
+                      ################################################################
+                      #botao para imprimir valores no formato escolhido fat 1adc dbc #
+                      ################################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportfat1adcdbc')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #    analise fat duplo com 1 trat adicional em DBC   #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'fat2addbc'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar4")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot4")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot4")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable4"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
-                
+
+
                 ######################################################
                 # analise fat duplo com 1 trat adicional em DIC      #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "H", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'fat2addic'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp5", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp5", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -677,62 +764,77 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigF5", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigT5", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigF5", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigT5", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
-                               actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
 
+                      tags$div(align="left",
+                               actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
+                      ),
+                      br(),
+                      ################################################################
+                      #botao para imprimir valores no formato escolhido fat 1adc dic #
+                      ################################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportfat1adcdic')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #    analise fat duplo com 1 trat adicional em DIC   #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'fat2addic'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar5")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot5")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot5")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable5"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
-                
+
+
                 ######################################################
                 # analise fat duplo  em DBC                          #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "I", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'fat2dbc'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp6", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp6", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -740,61 +842,76 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigF6", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      
-                      textInput("sigT6", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigF6", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+
+                      textInput("sigT6", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
 
-                      tags$div(align="left", 
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
-                      
+                      ),
+                      br(),
+                      ################################################################
+                      #botao para imprimir valores no formato escolhido fat duploDBC #
+                      ################################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportfatduploDBC')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #    analise fat duplo em DBC                        #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'fat2dbc'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar6")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot6")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot6")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable6"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 # analise fat duplo  em DIC                          #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "J", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'fat2dic'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp7", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp7", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -802,59 +919,74 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF7", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigT7", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF7", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigT7", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
-                      
+                      ),
+                      br(),
+                      ################################################################
+                      #botao para imprimir valores no formato escolhido fat duploDiC #
+                      ################################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportfatduploDIC')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #    analise fat duplo em DIC                        #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'fat2dic'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar7")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot7")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot7")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable7"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 # Fatorial Triplo com um tratamento adicional em DBC #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "K", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'fat3addbc'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp8", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp8", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -862,59 +994,75 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF8", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigT8", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF8", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigT8", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
-                      
+                      ),
+                      br(),
+
+                      #####################################################################
+                      #botao para imprimir valores no formato escolhido fat triplo 1ddDBC #
+                      #####################################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportfattriploaddDBC')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       # Fatorial Triplo com um tratamento adicional em DBC #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'fat3addbc'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar8")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot8")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot8")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable8"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 # Fatorial Triplo com um tratamento adicional em DIC #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "L", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'fat3addic'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp9", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp9", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -922,59 +1070,74 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF9", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigT9", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF9", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigT9", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
-                      
+                      ),
+                      br(),
+                      #####################################################################
+                      #botao para imprimir valores no formato escolhido fat triplo 1ddDIC #
+                      #####################################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportfattriploaddDIC')
+                    )
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       # Fatorial Triplo com um tratamento adicional em DIC #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'fat3addic'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar9")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot9")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot9")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable9"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 #               Fatorial Triplo em DBC               #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "M", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'fat3dbc'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp10", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp10", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -982,59 +1145,75 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF10", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigT10", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF10", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigT10", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
-                      
+                      ),
+                      br(),
+                      #####################################################################
+                      #botao para imprimir valores no formato escolhido fat triplo DBC    #
+                      #####################################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportfattriploDBC')
+                    )
+
                     ),
                     mainPanel(
-                      
+
                       ######################################################
                       #               Fatorial Triplo em DBC               #
                       ######################################################
+                      conditionalPanel(condition = "input.deli == 'fat3dbc'",
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar10")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot10")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot10")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable10"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 #               Fatorial Triplo em DIC               #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "N", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'fat3dic'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp11", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp11", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -1042,58 +1221,74 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF11", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigT11", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF11", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigT11", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
+                      ),
+                      br(),
+                      #####################################################################
+                      #botao para imprimir valores no formato escolhido fat triplo DIC    #
+                      #####################################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportfattriploDIC')
+                    )
                     ),
-                    
+
+                    conditionalPanel(condition = "input.deli == 'fat3dic'",
                     mainPanel(
                       ######################################################
                       #               Fatorial Triplo em DIC               #
                       ######################################################
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar11")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot11")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot11")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable11"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 #           Parcelas Subdivididas em DBC             #
                 ######################################################
-                
+
                 tabPanel
                 (
                   "O", icon=icon("bars"),
                   sidebarLayout
                   (
+                    conditionalPanel(condition = "input.deli == 'psub2dbc'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp12", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp12", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -1101,58 +1296,73 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF12", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigT12", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF12", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigT12", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
+                      ),
+                      br(),
+                      ######################################################
+                      #botao para imprimir valores no formato escolhido DIC#
+                      ######################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportPARSUBDBC')
+                    )
                     ),
-                    
+
+                    conditionalPanel(condition = "input.deli == 'psub2dbc'",
                     mainPanel(
                       ######################################################
                       #           Parcelas Subdivididas em DBC             #
                       ######################################################
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar12")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot12")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot12")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable12"))
                       )
+                    )
                     )
                   ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
-                  
+
                 ),
-                
+
                 ######################################################
                 #           Parcelas Subdivididas em DIC             #
                 ######################################################
                 tabPanel
                 (
-                  "P", icon=icon("bars"), 
+                  "P", icon=icon("bars"),
                   sidebarLayout
                   (
                     conditionalPanel(condition = "input.deli == 'psub2dic'",
                     sidebarPanel
                     (
                       # Input: Seleciona o teste de hipotese ----
-                      
-                      radioButtons("mcomp13", "Selecione o teste de comparacao multipla:",
-                                   choices = c('Tukey' = "default",
+
+                      radioButtons("mcomp13", "Selecione o teste de comparacao múltipla:",
+                                   choices = c('Tukey' = "tukey",
                                                'LSB' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
@@ -1160,26 +1370,35 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                                'Scott-Knott' = "sk",
                                                'Bootstrap' = "ccboot",
                                                'Calinski e Corsten' = "ccf"),
-                                   selected = "default"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigF13", "Significancia a ser adotada pelo teste F: ", "0.05"),
-                      
-                      # Input: Significancia a ser adotada pelo teste F ----
-                      textInput("sigT13", "Significancia a ser adotada pelo teste de comparacao multipla de médias: ", "0.05"),
-                      
+                                   selected = "tukey"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigF13", "Significância a ser adotada pelo teste F: ", "0.05"),
+
+                      # Input: Significância a ser adotada pelo teste F ----
+                      textInput("sigT13", "Significância a ser adotada pelo teste de comparacao múltipla de médias: ", "0.05"),
+
                       tags$hr(),
-                      
+
                       ######################################################
                       #     botao voltar e seus alinhamentos em html       #
                       ######################################################
-                      
-                      tags$div(align="left", 
+
+                      tags$div(align="left",
                                actionButton("action10", label = "< Voltar", class="btn btn-primary", width="50%")
-                      )
+                      ),
+                      br(),
+                      ######################################################
+                      #botao para imprimir valores no formato escolhido    #
+                      ######################################################
+
+
+                      radioButtons('format', 'Formato do documento', c(  'HTML', 'DOCX'),
+                                   inline = TRUE),
+                      downloadButton('downloadReportPARSUBDIC')
                     )
                 ),
-                    
+
                     conditionalPanel(condition = "input.deli == 'psub2dic'",
                     mainPanel(
                       ######################################################
@@ -1187,17 +1406,20 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                       ######################################################
                       tabsetPanel(
                         tabPanel("Box Plot",           plotlyOutput("plotar13")),
-                        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot13")),
+                        tabPanel("Análise de resíduo",          plotOutput("resid_plot13")),
                         tabPanel("ANAVA",       verbatimTextOutput("anovatable13"))
                       )
                     )
-                  )
+                 )
                 ),
                   # FOOTER CREDITOS
                   hr(),
                   tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div( align="center",
+                            HTML("Ver. 1.0 - 2019")
+                  ),
                   br()
               )
             )
-              
+
 )
