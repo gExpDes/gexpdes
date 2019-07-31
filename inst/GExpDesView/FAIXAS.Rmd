@@ -1,0 +1,55 @@
+---
+title: "FAIXAS"
+---
+
+``` {r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+
+    dataset= whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    bloco<-dataset[input$bloc]
+    blocos <- unlist(bloco)
+    fat<-dataset[input$fator1]
+    fat1 <- unlist(fat)
+    fato<-dataset[input$fator2]
+    fat2 <- unlist(fato)
+    
+    sigT3 <- as.numeric(input$sigT3)
+    sigF3 <- as.numeric(input$sigF3)
+
+  faixas.model<-faixas(fat1, fat2, blocos, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp3, sigT=sigT3, sigF=sigF3)
+
+```
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+summary(dataset)
+str(dataset)
+
+
+#######################################################
+#              Tabela ANOVA FAIXAS                    #  #######################################################
+faixas(fat1, fat2, blocos, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp3, sigT=sigT3, sigF=sigF3)
+
+
+#######################################################
+#           Plot Residuos                             # 
+####################################################### 
+plotres(faixas.model)
+
+```

@@ -1,0 +1,29 @@
+Package: GExpDes
+Type: Package
+Title: GExpDes (ambiente gáfico de analíse estatistíca ExpDes)
+Version: 1.0
+Author: as.person(c(
+ Rogerio Kormann < rogerio.kormann@grad.ufsc.br>;
+ Eduardo Nunes Rosa <eduardo.nunes@grad.ufsc.br>;
+ Crysttian Arantes Paixao <crysttian@gmail.com>;
+  Eric Batista Ferreira-  <eric.ferreira@unifal-mg.edu.br>;         
+  Denismar Alves Nogueira- <denismar.nogueira@unifal-mg.edu.br>.))
+Description: Os dados gerados a partir de um experimento são analisados segundo metodologias de Estatística Experimental, ara realizar essas análises, destacam-se a utilização da linguagem R, particularmente com o pacote ExpDes. 
+License: MIT 
+Encoding: UTF-8
+LazyData: true
+Depends: 
+  R    (>= 3.5.0)
+Imports:
+        ExpDes.pt,
+        car,
+        ds, 
+        nortest,
+        plotly, 
+        pracma, 
+        rmarkdown, 
+        shiny,
+        shinythemes, 
+        stringr, 
+        xtable  
+RoxygenNote: 6.1.1

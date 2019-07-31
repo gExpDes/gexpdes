@@ -1,0 +1,61 @@
+---
+title: "FATORIAL TRIPLO COM UM TRATAMENTO ADICIONAL EM DBC"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+
+ dataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    bloco<-dataset[input$bloc]
+    blocos <- unlist(bloco)
+    fat<-dataset[input$fator1]
+    fat1 <- unlist(fat)
+    fato<-dataset[input$fator2]
+    fat2 <- unlist(fato)
+    fatoo<-dataset[input$fator3]
+    fat3 <- unlist(fatoo)
+    respadi<-dataset[input$respad]
+    respAd <- unlist(respadi)
+    
+    sigT8 <- as.numeric(input$sigT8)
+    sigF8 <- as.numeric(input$sigF8)
+    
+ fat3.ad.dbc.model<- fat3.ad.dbc(fat1, fat2, fat3, blocos, respos, respAd, quali = c(input$quali1, input$quali2, input$quali3), mcomp=input$mcomp8, sigT=sigT8, sigF=sigF8)   
+    
+```
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+ summary(dataset)
+ str(dataset)
+ 
+
+#################################################################
+#Tabela ANOVA FATORIAL TRIPLO COM UM TRATAMENTO ADICIONAL EM DBC#  #################################################################
+    
+fat3.ad.dbc(fat1, fat2, fat3, blocos, respos, respAd, quali = c(input$quali1, input$quali2, input$quali3), mcomp=input$mcomp8, sigT=sigT8, sigF=sigF8)
+
+#######################################################
+#           Plot Residuos                             # 
+#######################################################
+
+plotres(fat3.ad.dbc.model)
+
+```

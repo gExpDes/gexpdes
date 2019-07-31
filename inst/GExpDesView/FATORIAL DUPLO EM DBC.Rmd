@@ -1,0 +1,58 @@
+---
+title: "FATORIAL DUPLO EM DBC"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+dataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    bloco<-dataset[input$bloc]
+    blocos <- unlist(bloco)
+    fat<-dataset[input$fator1]
+    fat1 <- unlist(fat)
+    fato<-dataset[input$fator2]
+    fat2 <- unlist(fato)
+    
+    sigT6 <- as.numeric(input$sigT6)
+    sigF6 <- as.numeric(input$sigF6)
+    
+    
+  fat2.dbc.model<-fat2.dbc(fat1, fat2, blocos, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp6, sigT=sigT6, sigF=sigF6)      
+```
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+ 
+summary(dataset)
+ str(dataset)
+ 
+ 
+#######################################################
+#       Tabela ANOVA fatorial duplo em DBC            #  #######################################################
+    
+fat2.dbc(fat1, fat2, blocos, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp6, sigT=sigT6, sigF=sigF6)
+
+#######################################################
+#           Plot Residuos                             # 
+#######################################################
+
+plotres(fat2.dbc.model)
+
+```
