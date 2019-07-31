@@ -6,7 +6,7 @@ Os dados gerados a partir de um experimento são analisados segundo metodologias
 
 Artigo do pacote publicado na Sigmae - [link](https://publicacoes.unifal-mg.edu.br/revistas/index.php/sigmae/article/view/951)
 
-**Lançamento na 64ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras) e 18º Simpósio de Estatística Aplicada à Experimentação Agronômica (SEAGRO) - [link](https://www.rbras64.com.br/) **
+**Lançamento na 64ª Reunião Anual da Região Brasileira da Sociedade Internacional de Biometria (RBras) e 18º Simpósio de Estatística Aplicada à Experimentação Agronômica (SEAGRO)** - [link](https://www.rbras64.com.br/)
 
 ## Equipe de Desenvolvimento
 
