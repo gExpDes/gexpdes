@@ -1,4 +1,4 @@
-# gExpDes - Interface Gráfica para o Pacote ExpDes
+# GExpDes - Interface Gráfica para o Pacote ExpDes
 
 ![](logo.png)
 
@@ -95,7 +95,7 @@ Sobre o labestData, consultar [https://gitlab.c3sl.ufpr.br/pet-estatistica/labes
 
 Após instalar os pacotes, digite os comandos no R:
 
-**require(gexpdes)**
+**require(GExpDEs)**
 
 **GExpDesView()**
 
