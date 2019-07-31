@@ -32,36 +32,47 @@ Para realizar a instalação do pacote gExpDes, execute os passos 1 e 2 na sequ�
 ## **Passo 1 - Instale os pacotes:**
 
 **shiny**
+
 install.packages("shiny",dependencies=TRUE)
 
 **shinythemes**
+
 install.packages("shinythemes",dependencies=TRUE)
 
 **ExpDes.pt**
+
 install.packages("ExpDes.pt",dependencies=TRUE)
 
 **rmarkdown**
+
 install.packages("rmarkdown",dependencies=TRUE)
 
 **plotly**
+
 install.packages("plotly",dependencies=TRUE)
 
 **xtable**
+
 install.packages("xtable",dependencies=TRUE)
 
 **nortest**
+
 install.packages("nortest",dependencies=TRUE)
 
 **car**
+
 install.packages("car",dependencies=TRUE)
 
 **pracma**
+
 install.packages("pracma",dependencies=TRUE)
 
 **stringr**
+
 install.packages("stringr",dependencies=TRUE)
 
 **ds**
+
 install.packages("ds",dependencies=TRUE)
 
 ## **Passo 2 - Instale o pacote GExpDes e o labestData de acordo com o seu sistema operacional:**
