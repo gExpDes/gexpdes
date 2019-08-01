@@ -330,7 +330,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                                 htmlOutput("menu"), htmlOutput("menu9"),
                                 htmlOutput("menu7"), htmlOutput("menu10"), htmlOutput("menu8"), htmlOutput("menu11"), htmlOutput("menu15"), htmlOutput("menu16"),
                                 htmlOutput("menu1"), htmlOutput("menu2"), htmlOutput("menu3"), htmlOutput("menu4"), htmlOutput("menu14"),
-                                htmlOutput("menu13"), htmlOutput("menu18"), htmlOutput("menu19"), htmlOutput("menu20"), htmlOutput("linear"), htmlOutput("linear1"),
+                                htmlOutput("menu13"), htmlOutput("menu18"), htmlOutput("linear"), htmlOutput("linear1"),
                                 tags$hr(),
 
                                 tags$div(align="center",
@@ -346,7 +346,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                     ######################################################
                     mainPanel(
                       tabsetPanel(
-                         tabPanel("Estrutura",  verbatimTextOutput("structure"), verbatimTextOutput("structure1"))
+                         tabPanel("Estrutura",  verbatimTextOutput("structure"))
                          )
                       )
                   ),
