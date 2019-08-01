@@ -2340,6 +2340,6 @@ server = function(input, output, session) {
       ))
       file.rename(out, file)
     }
-
   )
+
   }
