@@ -140,7 +140,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                      tags$hr()
 
                     ),
-                    mainPanel(tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo3.png', width='560')),
+                    mainPanel(tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='560')),
                               tags$div( align="center",
                                              HTML("Ver. 1.0 - 2019 - Desenvolvido por:"),
                                              br(),
@@ -195,7 +195,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                      )
 
                     ),
-                    mainPanel(tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo3.png', width='560'), br()),
+                    mainPanel(tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='560'), br()),
                               br()
                     )
                     )
@@ -257,7 +257,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                     ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -289,7 +289,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                           ),
@@ -353,7 +353,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -422,7 +422,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -501,7 +501,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -578,7 +578,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -656,7 +656,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -733,7 +733,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -811,7 +811,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -889,7 +889,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -964,7 +964,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -1040,7 +1040,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -1115,7 +1115,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -1191,7 +1191,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -1266,7 +1266,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -1341,7 +1341,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
@@ -1415,7 +1415,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                 ),
                   # FOOTER CREDITOS
                   hr(),
-                  tags$div(align="center", valign="top", img(src='http://rbras.org.br/sites/default/files/pictures/logo32.png', width='160'), br()),
+                  tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
                             HTML("Ver. 1.0 - 2019")
                   ),
