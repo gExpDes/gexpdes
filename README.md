@@ -108,3 +108,7 @@ Caso tenha alguma sugestão, pedimos que nos envie um e-mail (gexpdes@gmail.com)
 ## Colaborações
 
 Caso queira colaborar com o desenvolvimento do pacote, por favor, nos comunique via e-mail. (gexpdes@gmail.com), pois será um prazer contar com a sua ajuda.
+
+## Notas da versão
+
+A versão atual do pacote é a 1.0, lançada na 54ª RBRAS e 18º SEAGRO.
