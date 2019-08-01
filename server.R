@@ -1427,8 +1427,13 @@ server = function(input, output, session) {
     fat2 <- unlist(fato)
     fatoo<-dataset[input$fator3]
     fat3 <- unlist(fatoo)
+    #respadi<-dataset[input$respad]
+    #respAd <- unlist(respadi)
+
+    respadi1<-dataset[input$respad]
+    adicional = respadi1[!is.na(respadi1)]
     respadi<-dataset[input$respad]
-    respAd <- unlist(respadi)
+    respAd <- unlist(adicional)
 
     sigT8 <- as.numeric(input$sigT8)
     sigF8 <- as.numeric(input$sigF8)
@@ -1453,8 +1458,13 @@ server = function(input, output, session) {
     fat2 <- unlist(fato)
     fatoo<-dataset[input$fator3]
     fat3 <- unlist(fatoo)
+    #respadi<-dataset[input$respad]
+    #respAd <- unlist(respadi)
+
+    respadi1<-dataset[input$respad]
+    adicional = respadi1[!is.na(respadi1)]
     respadi<-dataset[input$respad]
-    respAd <- unlist(respadi)
+    respAd <- unlist(adicional)
 
     sigT9 <- as.numeric(input$sigT9)
     sigF9 <- as.numeric(input$sigF9)
@@ -2330,5 +2340,6 @@ server = function(input, output, session) {
       ))
       file.rename(out, file)
     }
+
   )
   }
