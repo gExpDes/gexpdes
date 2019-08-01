@@ -125,10 +125,11 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                               actionButton("action7", label="Iniciar a análise", class="btn btn-primary", icon= icon("angle-right"), width="75%")
                      ),
 
-                     #br(),
-                     #tags$div(align="center",
-                     #         actionButton("action5", label=" Ajuda", class="btn btn-primary", icon=icon("question-circle"), width="65%")
-                     #),
+                     br(),
+                     tags$div(align="center",
+                              actionButton("action5", label=" Ajuda", onclick ="window.open('https://github.com/gExpDes/gexpdes/blob/master/README.md', '_blank')",
+                                           class="btn btn-primary", icon=icon("question-circle"), width="65%")
+                     ),
 
                      br(),
                      tags$div(align="center",
