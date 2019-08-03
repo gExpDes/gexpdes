@@ -8,6 +8,7 @@ Author: as.person(c(
  Crysttian Arantes Paixao <crysttian@gmail.com>;
   Eric Batista Ferreira-  <eric.ferreira@unifal-mg.edu.br>;         
   Denismar Alves Nogueira- <denismar.nogueira@unifal-mg.edu.br>.))
+Maintainer:Crysttian Arantes Paixao <crysttian@gmail.com>
 Description: Os dados gerados a partir de um experimento são analisados segundo metodologias de Estatística Experimental, ara realizar essas análises, destacam-se a utilização da linguagem R, particularmente com o pacote ExpDes. 
 License: MIT 
 Encoding: UTF-8
