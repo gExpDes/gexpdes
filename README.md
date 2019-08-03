@@ -76,18 +76,27 @@ install.packages("stringr",dependencies=TRUE)
 install.packages("ds",dependencies=TRUE)
 
 ## **Passo 2 - Instale o pacote GExpDes e o labestData de acordo com o seu sistema operacional:**
-
+### Opção A - Instalação direta do pacote 
 ### Para Linux
 #### gExpDes
 install.packages("https://github.com/gExpDes/gexpdes/blob/master/GExpDes_1.0.tar.gz", repos  =  NULL)
 #### labestData
-install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-17.458.tar.gz",repos = NULL)
+install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-17.458.tar.gz", repos = NULL)
 
 ### Para Windows
 #### gExpDes
 install.packages("https://github.com/gExpDes/gexpdes/blob/master/GExpDes_1.0.zip", repos  =  NULL)
 #### labestData
-install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.17.458.zip",repos = NULL)
+install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.17.458.zip", repos = NULL)
+
+### Opção B - Instalação direta do git
+#### gExpDes
+require(devtools)
+install_git(url = "https://github.com/gExpDes/gexpdes.git",branch = "master",build_vignettes=TRUE)
+
+#### labestData
+install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.17.458.zip", repos = NULL)
+
 
 Sobre o labestData, consultar [https://gitlab.c3sl.ufpr.br/pet-estatistica/labestData](https://gitlab.c3sl.ufpr.br/pet-estatistica/labestData)
 
