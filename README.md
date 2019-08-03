@@ -26,7 +26,7 @@ Artigo do pacote publicado na Sigmae - [link](https://publicacoes.unifal-mg.edu.
 - Denismar Alves Nogueira
 
 # Instalação
-Para realizar a instalação do pacote gExpDes, execute os passos 1 e 2 na sequência.
+Para realizar a instalação do pacote gExpDes execute os passos 1 e 2 na sequência.
 
 
 ## **Passo 1 - Instale os pacotes:**
@@ -93,7 +93,7 @@ Sobre o labestData, consultar [https://gitlab.c3sl.ufpr.br/pet-estatistica/labes
 
 # Executando
 
-Após instalar os pacotes, digite os comandos no R:
+Após instalar o pacote GExpDes, digite os comandos no R:
 
 **require(GExpDEs)**
 
