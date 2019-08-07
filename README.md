@@ -100,7 +100,7 @@ install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.17.458.zip",
 
 require(devtools)
 
-install_git(url = "https://github.com/gExpDes/gexpdes.git",branch = "master",build_vignettes=TRUE)
+install_git(url = "https://github.com/gExpDes/gexpdes.git", branch = "master",build_vignettes=TRUE)
 
 #### labestData
 
