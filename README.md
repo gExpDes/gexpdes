@@ -79,22 +79,31 @@ install.packages("ds",dependencies=TRUE)
 ### Opção A - Instalação direta do pacote 
 ### Para Linux
 #### gExpDes
+
 install.packages("https://github.com/gExpDes/gexpdes/blob/master/GExpDes_1.0.tar.gz", repos  =  NULL)
+
 #### labestData
+
 install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-17.458.tar.gz", repos = NULL)
 
 ### Para Windows
 #### gExpDes
+
 install.packages("https://github.com/gExpDes/gexpdes/blob/master/GExpDes_1.0.zip", repos  =  NULL)
+
 #### labestData
+
 install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.17.458.zip", repos = NULL)
 
 ### Opção B - Instalação direta do git
 #### gExpDes
+
 require(devtools)
+
 install_git(url = "https://github.com/gExpDes/gexpdes.git",branch = "master",build_vignettes=TRUE)
 
 #### labestData
+
 install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.17.458.zip", repos = NULL)
 
 
