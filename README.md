@@ -80,7 +80,7 @@ install.packages("ds",dependencies=TRUE)
 ### Para Linux
 #### gExpDes
 
-install.packages("https://github.com/gExpDes/gexpdes/blob/master/GExpDes_1.0.tar.gz", repos  =  NULL)
+install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.tar.gz", repos  =  NULL)
 
 #### labestData
 
@@ -89,7 +89,7 @@ install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-17.458.tar.g
 ### Para Windows
 #### gExpDes
 
-install.packages("https://github.com/gExpDes/gexpdes/blob/master/GExpDes_1.0.zip", repos  =  NULL)
+install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.zip", repos  =  NULL)
 
 #### labestData
 
