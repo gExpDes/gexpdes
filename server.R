@@ -1705,14 +1705,14 @@ server = function(input, output, session) {
     if(input$quali == 'FALSE') {
       tabsetPanel(
         tabPanel("Box Plot",           plotlyOutput("plotar1")),
-        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot")),
+        tabPanel("Análise de Resíduo",          plotOutput("resid_plot")),
         tabPanel("ANAVA",       verbatimTextOutput("anovatable")),
         tabPanel("Modelos de regressão lineares",   plotOutput("modelos"))
       )
     } else {
       tabsetPanel(
         tabPanel("Box Plot",           plotlyOutput("plotar1")),
-        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot")),
+        tabPanel("Análise de Resíduo",          plotOutput("resid_plot")),
         tabPanel("ANAVA",       verbatimTextOutput("anovatable"))
       )
     }
@@ -1863,14 +1863,14 @@ server = function(input, output, session) {
     if(input$quali == 'FALSE') {
       tabsetPanel(
         tabPanel("Box Plot",           plotlyOutput("plotar")),
-        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot1")),
+        tabPanel("Análise de Resíduo",          plotOutput("resid_plot1")),
         tabPanel("ANAVA",       verbatimTextOutput("anovatable1")),
         tabPanel("Modelos de regressão lineares",   plotOutput("modelos1"))
       )
     } else {
       tabsetPanel(
         tabPanel("Box Plot",           plotlyOutput("plotar")),
-        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot1")),
+        tabPanel("Análise de Resíduo",          plotOutput("resid_plot1")),
         tabPanel("ANAVA",       verbatimTextOutput("anovatable1"))
       )
     }
