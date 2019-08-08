@@ -100,7 +100,7 @@ Sobre o labestData, consultar [https://gitlab.c3sl.ufpr.br/pet-estatistica/labes
 
 Após instalar o pacote GExpDes, digite os comandos no R:
 
-**require(GExpDEs)**
+**require(GExpDes)**
 
 **GExpDesView()**
 
