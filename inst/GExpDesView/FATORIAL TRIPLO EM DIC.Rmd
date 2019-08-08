@@ -49,7 +49,7 @@ fat3.dic(fat1, fat2, fat3, respos, quali = c(input$quali1, input$quali2, input$q
 
 
 #######################################################
-#           Plot Residuos                             # 
+#       Análise de resíduo                            # 
 #######################################################
 
 plotres(fat3.dic.model)

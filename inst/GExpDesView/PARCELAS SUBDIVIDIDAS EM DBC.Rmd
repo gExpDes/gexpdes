@@ -47,7 +47,7 @@ dataset
 psub2.dbc(fat1, fat2, blocos, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp12, sigT=sigT12, sigF=sigF12)
 
 #######################################################
-#           Plot Residuos                             # 
+#        Análise de resíduo                           # 
 #######################################################
 
 plotres(psub2.dbc.model)

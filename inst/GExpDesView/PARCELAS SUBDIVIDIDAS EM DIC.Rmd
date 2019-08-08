@@ -51,7 +51,7 @@ psub2.dic(fat1, fat2, repet, respos, quali = c(input$quali1, input$quali2), mcom
 
 
 #######################################################
-#           Plot Residuos                             # 
+#         Análise de resíduo                         # 
 #######################################################
 
 plotres(psub2.dic.model)

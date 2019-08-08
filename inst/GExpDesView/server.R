@@ -154,6 +154,7 @@ server = function(input, output, session) {
   ############################################################
   whichdataset <- reactive({
 
+    rm(list=ls())
     if(input$conj=="labest"){
       req(input$vetornome)
       #busca dados do agricolae e LabestData
@@ -1705,14 +1706,14 @@ server = function(input, output, session) {
     if(input$quali == 'FALSE') {
       tabsetPanel(
         tabPanel("Box Plot",           plotlyOutput("plotar1")),
-        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot")),
+        tabPanel("Análise de Resíduo",          plotOutput("resid_plot")),
         tabPanel("ANAVA",       verbatimTextOutput("anovatable")),
         tabPanel("Modelos de regressão lineares",   plotOutput("modelos"))
       )
     } else {
       tabsetPanel(
         tabPanel("Box Plot",           plotlyOutput("plotar1")),
-        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot")),
+        tabPanel("Análise de Resíduo",          plotOutput("resid_plot")),
         tabPanel("ANAVA",       verbatimTextOutput("anovatable"))
       )
     }
@@ -1863,14 +1864,14 @@ server = function(input, output, session) {
     if(input$quali == 'FALSE') {
       tabsetPanel(
         tabPanel("Box Plot",           plotlyOutput("plotar")),
-        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot1")),
+        tabPanel("Análise de Resíduo",          plotOutput("resid_plot1")),
         tabPanel("ANAVA",       verbatimTextOutput("anovatable1")),
         tabPanel("Modelos de regressão lineares",   plotOutput("modelos1"))
       )
     } else {
       tabsetPanel(
         tabPanel("Box Plot",           plotlyOutput("plotar")),
-        tabPanel("Pressuposicoes/Residuo",          plotOutput("resid_plot1")),
+        tabPanel("Análise de Resíduo",          plotOutput("resid_plot1")),
         tabPanel("ANAVA",       verbatimTextOutput("anovatable1"))
       )
     }
@@ -1953,7 +1954,7 @@ server = function(input, output, session) {
   ###################################
   output$downloadReportDIC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= 'docx', HTML='html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= 'docx', HTML='html')
       )
     },
     content = function(file) {
@@ -1983,7 +1984,7 @@ server = function(input, output, session) {
   ###################################
   output$downloadReportDBC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format,DOCX= 'docx',HTML='html')
       )
     },
     content = function(file) {
@@ -2011,7 +2012,7 @@ server = function(input, output, session) {
   ###################################
   output$downloadReportDQL<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2039,7 +2040,7 @@ server = function(input, output, session) {
   ###################################
   output$downloadReportFAIXAS<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2067,7 +2068,7 @@ server = function(input, output, session) {
   ############################################
   output$downloadReportfat1adcdbc<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2095,7 +2096,7 @@ server = function(input, output, session) {
   ########################################
   output$downloadReportfat1adcdic<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2123,7 +2124,7 @@ server = function(input, output, session) {
   #######################################
   output$downloadReportfatduploDBC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2152,7 +2153,7 @@ server = function(input, output, session) {
   ##########################################
   output$downloadReportfatduploDIC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2180,7 +2181,7 @@ server = function(input, output, session) {
   ###############################################
   output$downloadReportfattriploaddDBC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2207,7 +2208,7 @@ server = function(input, output, session) {
   ################################################
   output$downloadReportfattriploaddDIC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2235,7 +2236,7 @@ server = function(input, output, session) {
   ###########################################
   output$downloadReportfattriploDBC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2263,7 +2264,7 @@ server = function(input, output, session) {
   ###########################################
   output$downloadReportfattriploDIC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {
@@ -2292,7 +2293,7 @@ server = function(input, output, session) {
   ###########################################
   output$downloadReportPARSUBDBC<- downloadHandler(
     filename= function( ){
-      paste ('my-report',sep = '.',switch(input$format, WORD= '.docx', HTML='.html')
+      paste ('my-report',sep = '.',switch(input$format, DOCX= '.docx', HTML='.html')
       )
     },
     content = function(file) {

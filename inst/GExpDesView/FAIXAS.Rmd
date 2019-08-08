@@ -48,7 +48,7 @@ faixas(fat1, fat2, blocos, respos, quali = c(input$quali1, input$quali2), mcomp=
 
 
 #######################################################
-#           Plot Residuos                             # 
+#           Análise de Residuos                       # 
 ####################################################### 
 plotres(faixas.model)
 

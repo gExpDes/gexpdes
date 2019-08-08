@@ -484,7 +484,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                       ######################################################
 
 
-                      radioButtons('format', 'Formato do documento', c( 'HTML', 'DOCX'),
+                      radioButtons('format', 'Formato do documento', c( 'HTML','DOCX'),
                                    inline = TRUE),
                       downloadButton('downloadReportDBC')
                     )

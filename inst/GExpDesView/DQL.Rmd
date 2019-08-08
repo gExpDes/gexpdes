@@ -59,7 +59,7 @@ dql(trat, linh, colu, respos, quali=input$quali, mcomp=input$mcomp2, sigT=sigT2,
 
 
 #######################################################
-#           Plot Residuos                             # 
+#           Análise de resíduo                       # 
 #######################################################
 
 plotres(dql.model)

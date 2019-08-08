@@ -47,7 +47,7 @@ dataset
 fat2.dic(fat1, fat2, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp7, sigT=sigT7, sigF=sigF7)
 
 #######################################################
-#           Plot Residuos                             # 
+#         Análise de resíduo                          # 
 #######################################################
 
 plotres(fat2.dic.model)

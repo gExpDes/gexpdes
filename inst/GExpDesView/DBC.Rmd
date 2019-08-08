@@ -55,6 +55,6 @@ dbc(trat, blocos, respos, quali=input$quali, mcomp=input$mcomp1, hvar=input$hvar
 
 
 #######################################################
-#           Plot Residuos                             # 
+#         Análise de resíduo                         # 
 #######################################################
 plotres(dbc.model)

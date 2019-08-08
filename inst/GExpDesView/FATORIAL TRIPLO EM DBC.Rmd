@@ -51,7 +51,7 @@ dataset
 fat3.dbc(fat1, fat2, fat3, blocos, respos, quali = c(input$quali1, input$quali2, input$quali3), mcomp=input$mcomp10, sigT=sigT10, sigF=sigF10)
 
 #######################################################
-#           Plot Residuos                             # 
+#          Análise de resíduo                         # 
 #######################################################
 
 plotres(fat3.dbc.model)

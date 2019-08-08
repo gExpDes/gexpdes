@@ -54,7 +54,7 @@ dataset
 fat2.ad.dbc(fat1, fat2, blocos, respos, respAd, quali = c(input$quali1, input$quali2), mcomp=input$mcomp4, sigT=sigT4, sigF=sigF4)
 
 #######################################################
-#           Plot Residuos                             # 
+#     Análise de resíduo                              # 
 #######################################################
 
 plotres(fat2.ad.dbc.model)

@@ -53,7 +53,7 @@ dataset
 fat3.ad.dic(fat1, fat2, fat3, repet, respos, respAd, quali = c(input$quali1, input$quali2, input$quali3), mcomp=input$mcomp9, sigT=sigT9, sigF=sigF9)
 
 #######################################################
-#           Plot Residuos                             # 
+#           Análise de resíduo                        # 
 #######################################################
 
 plotres(fat3.ad.dic.model)

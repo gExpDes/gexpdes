@@ -57,7 +57,7 @@ dic(trat, respos, quali=input$quali, nl=input$nl1, mcomp=input$mcomp, hvar=input
 
 
 #######################################################
-#           Plot Residuos                             # 
+#           Análise de resíduo                       # 
 #######################################################
 
 plotres(dic.model)

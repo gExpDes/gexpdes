@@ -51,7 +51,7 @@ str(dataset)
 fat2.ad.dic(fat1, fat2, repet, respos, respAd, quali = c(input$quali1, input$quali2), mcomp=input$mcomp5, sigT=sigT5, sigF=sigF5)
 
 #######################################################
-#           Plot Residuos                             # 
+#           Análise de resíduo                       # 
 #######################################################
 
 plotres(fat2.ad.dic.model)
