@@ -34,29 +34,49 @@ Para realizar a instalação do pacote gExpDes execute os passos 1 e 2 na sequê
 O GExpDes utiliza os seguintes pacotes do R:
 
 -**shiny**
+
 -**shinythemes**
+
 -**ExpDes.pt**
+
 -**rmarkdown**
+
 -**plotly**
+
 -**xtable**
+
 -**nortest**
+
 -**car**
+
 -**pracma**
+
 -**stringr**
+
 -**ds**
 
 Para instalar os pacotes descritos, copie os códigos abaixo e cole no terminal do R.
 
 **install.packages("shiny",dependencies=TRUE)**
+
 **install.packages("shinythemes",dependencies=TRUE)**
+
 **install.packages("ExpDes.pt",dependencies=TRUE)**
+
 **install.packages("rmarkdown",dependencies=TRUE)**
+
 **install.packages("plotly",dependencies=TRUE)**
+
 **install.packages("xtable",dependencies=TRUE)**
+
 **install.packages("nortest",dependencies=TRUE)**
+
 **install.packages("car",dependencies=TRUE)**
+
 **install.packages("pracma",dependencies=TRUE)**
+
 **install.packages("stringr",dependencies=TRUE)**
+
 **install.packages("ds",dependencies=TRUE)**
 
 ## **Passo 2 - Instale o pacote GExpDes e o labestData de acordo com o seu sistema operacional:**
