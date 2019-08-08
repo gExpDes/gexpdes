@@ -154,6 +154,7 @@ server = function(input, output, session) {
   ############################################################
   whichdataset <- reactive({
 
+    rm(list=ls())
     if(input$conj=="labest"){
       req(input$vetornome)
       #busca dados do agricolae e LabestData
