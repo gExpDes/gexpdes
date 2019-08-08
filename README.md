@@ -31,53 +31,40 @@ Para realizar a instalação do pacote gExpDes execute os passos 1 e 2 na sequê
 
 ## **Passo 1 - Instale os pacotes:**
 
-**shiny**
+O GExpDes utiliza os seguintes pacotes do R:
 
-install.packages("shiny",dependencies=TRUE)
+-**shiny**
+-**shinythemes**
+-**ExpDes.pt**
+-**rmarkdown**
+-**plotly**
+-**xtable**
+-**nortest**
+-**car**
+-**pracma**
+-**stringr**
+-**ds**
 
-**shinythemes**
+Para instalar os pacotes descritos, copie os códigos abaixo e cole no terminal do R.
 
-install.packages("shinythemes",dependencies=TRUE)
-
-**ExpDes.pt**
-
-install.packages("ExpDes.pt",dependencies=TRUE)
-
-**rmarkdown**
-
-install.packages("rmarkdown",dependencies=TRUE)
-
-**plotly**
-
-install.packages("plotly",dependencies=TRUE)
-
-**xtable**
-
-install.packages("xtable",dependencies=TRUE)
-
-**nortest**
-
-install.packages("nortest",dependencies=TRUE)
-
-**car**
-
-install.packages("car",dependencies=TRUE)
-
-**pracma**
-
-install.packages("pracma",dependencies=TRUE)
-
-**stringr**
-
-install.packages("stringr",dependencies=TRUE)
-
-**ds**
-
-install.packages("ds",dependencies=TRUE)
+**install.packages("shiny",dependencies=TRUE)**
+**install.packages("shinythemes",dependencies=TRUE)**
+**install.packages("ExpDes.pt",dependencies=TRUE)**
+**install.packages("rmarkdown",dependencies=TRUE)**
+**install.packages("plotly",dependencies=TRUE)**
+**install.packages("xtable",dependencies=TRUE)**
+**install.packages("nortest",dependencies=TRUE)**
+**install.packages("car",dependencies=TRUE)**
+**install.packages("pracma",dependencies=TRUE)**
+**install.packages("stringr",dependencies=TRUE)**
+**install.packages("ds",dependencies=TRUE)**
 
 ## **Passo 2 - Instale o pacote GExpDes e o labestData de acordo com o seu sistema operacional:**
+
 ### Opção A - Instalação direta do pacote 
+
 ### Para Linux
+
 #### gExpDes
 
 install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.tar.gz", repos  =  NULL)
@@ -87,6 +74,7 @@ install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.tar.
 install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-17.458.tar.gz", repos = NULL)
 
 ### Para Windows
+
 #### gExpDes
 
 install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.zip", repos  =  NULL)
@@ -96,6 +84,7 @@ install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.zip"
 install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.17.458.zip", repos = NULL)
 
 ### Opção B - Instalação direta do git
+
 #### gExpDes
 
 require(devtools)
