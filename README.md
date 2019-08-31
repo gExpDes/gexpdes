@@ -11,7 +11,7 @@ Artigo do pacote publicado na Sigmae - [link](https://publicacoes.unifal-mg.edu.
 ## Equipe de Desenvolvimento
 
 **Universidade Federa de Santa Catarina - UFSC**
-- Rogério Kormann (Agronomia)
+- Rogério Kormann (Agronomia) - rogerio.kormann@ufsc.br
 - Eduardo Nunes Rosa (Agronomia)
 - Crysttian Arantes Paixão
 - Bruna Juliana Américo Machado (Medicina Veterinária)
