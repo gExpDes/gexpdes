@@ -445,7 +445,8 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                       # Input: Seleciona o teste de hipotese ----
 
                       radioButtons("mcomp1", "Selecione o teste de comparacao múltipla:",
-                                   choices = c('Tukey' = "lsd",
+                                   choices = c('Tukey' = "tukey",
+                                               'LSD' = "lsd",
                                                'Duncan' = "duncan",
                                                'SNK' = "snk",
                                                'Calinski e Corsten' = "ccf",
@@ -525,7 +526,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
 
                       radioButtons("mcomp2", "Selecione o teste de comparacao múltipla:",
                                    choices = c('Tukey' = "tukey",
-                                               'LSB' = "lsd",
+                                               'LSD' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
                                                'SNK' = "snk",
@@ -602,7 +603,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
 
                       radioButtons("mcomp3", "Selecione o teste de comparacao múltipla:",
                                    choices = c('Tukey' = "tukey",
-                                               'LSB' = "lsd",
+                                               'LSD' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
                                                'SNK' = "snk",
@@ -680,7 +681,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
 
                       radioButtons("mcomp4", "Selecione o teste de comparacao múltipla:",
                                    choices = c('Tukey' = "tukey",
-                                               'LSB' = "lsd",
+                                               'LSD' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
                                                'SNK' = "snk",
@@ -758,7 +759,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
 
                       radioButtons("mcomp5", "Selecione o teste de comparacao múltipla:",
                                    choices = c('Tukey' = "tukey",
-                                               'LSB' = "lsd",
+                                               'LSD' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
                                                'SNK' = "snk",
@@ -836,7 +837,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
 
                       radioButtons("mcomp6", "Selecione o teste de comparacao múltipla:",
                                    choices = c('Tukey' = "tukey",
-                                               'LSB' = "lsd",
+                                               'LSD' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
                                                'SNK' = "snk",
@@ -913,7 +914,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
 
                       radioButtons("mcomp7", "Selecione o teste de comparacao múltipla:",
                                    choices = c('Tukey' = "tukey",
-                                               'LSB' = "lsd",
+                                               'LSD' = "lsd",
                                                'LSDB' = "lsdb",
                                                'Duncan' = "duncan",
                                                'SNK' = "snk",
