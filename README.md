@@ -65,7 +65,7 @@ Para instalar os pacotes descritos, copie os códigos abaixo e cole no terminal 
 
 #### gExpDes
 
-install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.tar.gz", repos  =  NULL)
+install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.1.tar.gz", repos  =  NULL)
 
 #### labestData
 
@@ -75,7 +75,7 @@ install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-17.458.tar.g
 
 #### gExpDes
 
-install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.zip", repos  =  NULL)
+install.packages("https://github.com/gExpDes/gexpdes/raw/master/GExpDes_1.0.1.zip", repos  =  NULL)
 
 #### labestData
 
