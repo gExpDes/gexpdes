@@ -1,6 +1,6 @@
 # GExpDes - Interface Gráfica para o Pacote ExpDes
 
-**Nova versão disponível 1.0.1 **
+:**Nova versão disponível 1.0.1 **:
 
 ![](logo.png)
 
