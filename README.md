@@ -14,8 +14,8 @@ Artigo do pacote publicado na Sigmae - [link](https://publicacoes.unifal-mg.edu.
 
 **Universidade Federa de Santa Catarina - UFSC**
 - Rogério Kormann (Agronomia) - rogerio.kormann@ufsc.br
-- Eduardo Nunes Rosa (Agronomia)
-- Crysttian Arantes Paixão
+- Eduardo Nunes Rosa (Agronomia) - eduardo.nunes@grad.ufsc.br
+- Crysttian Arantes Paixão - crysttian.arantes.paixao@ufsc.br
 - Bruna Juliana Américo Machado (Medicina Veterinária)
 - Felipe Weber Ferrarez (Agronomia)
 - Amanda Mor (Medicina Veterinária)
