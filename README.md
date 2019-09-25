@@ -1,5 +1,7 @@
 # GExpDes - Interface Gráfica para o Pacote ExpDes
 
+**Nova versão disponível 1.0.1 **
+
 ![](logo.png)
 
 Os dados gerados a partir de um experimento são analisados segundo metodologias de Estatística Experimental. Para realizar essas análises, destacam-se a utilização da linguagem R, particularmente com o pacote **ExpDes**. Para quem não quer se preocupar com a linguagem R, esse trabalho apresenta uma aplicação em **Shiny** que possibilita o uso dos pacotes **ExpDes** e **labestData**. A interface reduz a complexidade da análise, sendo um auxiliar para a montagem dos comandos da linguagem R para realizá-la. Ao final, os comandos que foram necessários também são disponibilizados ao usuário.
@@ -116,4 +118,11 @@ Caso queira colaborar com o desenvolvimento do pacote, por favor, nos comunique 
 
 ## Notas da versão
 
-A versão atual do pacote é a 1.0, lançada na 54ª RBRAS e 18º SEAGRO.
+A versão atual do pacote é a 1.0.1. O pacote foi lançado na versão 1.0 durante a 54ª RBRAS e 18º SEAGRO. 
+
+Versão 1.0
+- Lançamento do pacote
+
+Versão 1.0.1
+- Pequenas correções sugeridas pelos usuários/colaboradores
+
