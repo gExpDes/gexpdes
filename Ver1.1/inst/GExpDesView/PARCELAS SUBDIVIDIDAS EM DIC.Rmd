@@ -1,0 +1,59 @@
+---
+title: "PARCELAS SUBDIVIDIDAS EM DIC"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+
+ataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    repe<-dataset[input$repeticao]
+    repet <- unlist(repe)
+    fat<-dataset[input$fator1]
+    fat1 <- unlist(fat)
+    fato<-dataset[input$fator2]
+    fat2 <- unlist(fato)
+    fatoo<-dataset[input$fator3]
+    fat3 <- unlist(fatoo)
+    
+    sigT13 <- as.numeric(input$sigT13)
+    sigF13 <- as.numeric(input$sigF13)
+    
+   psub2.dic.model<-psub2.dic(fat1, fat2, repet, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp13, sigT=sigT13, sigF=sigF13)
+```
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+
+dataset
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+
+ summary(dataset)
+ str(dataset)
+ 
+
+#################################################################
+#           Tabela ANOVA PARCELAS SUBDIVIDIDAS EM DIC           #  #################################################################
+psub2.dic(fat1, fat2, repet, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp13, sigT=sigT13, sigF=sigF13)
+
+
+#######################################################
+#         Análise de resíduo                         # 
+#######################################################
+
+plotres(psub2.dic.model)
+
+```

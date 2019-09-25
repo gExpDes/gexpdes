@@ -1,0 +1,55 @@
+---
+title: "FATORIAL DUPLO EM DIC"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+
+dataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    fat<-dataset[input$fator1]
+    fat1 <- unlist(fat)
+    fato<-dataset[input$fator2]
+    fat2 <- unlist(fato)
+    
+    sigT7 <- as.numeric(input$sigT7)
+    sigF7 <- as.numeric(input$sigF7)
+    
+    fat2.dic.model<- fat2.dic(fat1, fat2, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp7, sigT=sigT7, sigF=sigF7)
+```
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+ summary(dataset)
+ str(dataset)
+ 
+
+######################################################
+#       Tabela ANOVA fatorial duplo em DIC          #  ######################################################
+    
+
+fat2.dic(fat1, fat2, respos, quali = c(input$quali1, input$quali2), mcomp=input$mcomp7, sigT=sigT7, sigF=sigF7)
+
+#######################################################
+#         Análise de resíduo                          # 
+#######################################################
+
+plotres(fat2.dic.model)
+
+```

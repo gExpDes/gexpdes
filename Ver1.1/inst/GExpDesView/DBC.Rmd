@@ -1,0 +1,60 @@
+---
+title: "DBC"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+library(plotly)
+
+ dataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    trata<-dataset[input$trat]
+    trat <- unlist(trata)
+    bloco<-dataset[input$bloc]
+    blocos <- unlist(bloco)
+    
+    sigT1 <- as.numeric(input$sigT1)
+    sigF1 <- as.numeric(input$sigF1)
+    
+    if(input$quali==TRUE)
+      trat = as.factor(trat)
+    if(input$quali==FALSE)
+      trat = as.numeric(trat)
+    
+    dbc.model=dbc(trat, blocos, respos, quali=input$quali, mcomp=input$mcomp1, hvar=input$hvar1, sigT=sigT1, sigF=sigF1)    
+   
+```
+
+
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+str(dataset)
+summary(dataset)
+
+#################################################################
+#                    Tabela ANOVA DBC                           #  #################################################################
+
+dbc(trat, blocos, respos, quali=input$quali, mcomp=input$mcomp1, hvar=input$hvar1, sigT=sigT1, sigF=sigF1)
+
+
+#######################################################
+#         Análise de resíduo                         # 
+#######################################################
+plotres(dbc.model)

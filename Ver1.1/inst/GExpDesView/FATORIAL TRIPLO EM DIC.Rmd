@@ -1,0 +1,57 @@
+---
+title: "FATORIAL TRIPLO EM DIC"
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+
+dataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    fat<-dataset[input$fator1]
+    fat1 <- unlist(fat)
+    fato<-dataset[input$fator2]
+    fat2 <- unlist(fato)
+    fatoo<-dataset[input$fator3]
+    fat3 <- unlist(fatoo)
+    
+    sigT11 <- as.numeric(input$sigT11)
+    sigF11 <- as.numeric(input$sigF11)
+    
+  fat3.dic.model<-fat3.dic(fat1, fat2, fat3, respos, quali = c(input$quali1, input$quali2, input$quali3), mcomp=input$mcomp11, sigT=sigT11, sigF=sigF11)
+```
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+ summary(dataset)
+ str(dataset)
+ 
+ 
+#################################################################
+#           Tabela ANOVA FATORIAL TRIPLO EM DIC                 #  #################################################################
+fat3.dic(fat1, fat2, fat3, respos, quali = c(input$quali1, input$quali2, input$quali3), mcomp=input$mcomp11, sigT=sigT11, sigF=sigF11)
+
+
+#######################################################
+#       Análise de resíduo                            # 
+#######################################################
+
+plotres(fat3.dic.model)
+
+```

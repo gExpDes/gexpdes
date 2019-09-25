@@ -1,0 +1,60 @@
+---
+title: "FATORIAL DUPLO COM UM TRATAMENTO ADICIONAL EM DIC"
+
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+
+dataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    repe<-dataset[input$repeticao]
+    repet <- unlist(repe)
+    fat<-dataset[input$fator1]
+    fat1 <- unlist(fat)
+    fato<-dataset[input$fator2]
+    fat2 <- unlist(fato)
+    respadi<-dataset[input$respad]
+    respAd <- unlist(respadi)
+    
+    sigT5 <- as.numeric(input$sigT5)
+    sigF5 <- as.numeric(input$sigF5)
+    
+ fat2.ad.dic.model<- fat2.ad.dic(fat1, fat2, repet, respos, respAd, quali = c(input$quali1, input$quali2), mcomp=input$mcomp5, sigT=sigT5, sigF=sigF5)
+        
+```
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+ summary(dataset)
+str(dataset)
+
+
+#######################################################
+# Tabela ANOVA fat duplo com 1 trat adicional em DIC  #  #######################################################
+    
+fat2.ad.dic(fat1, fat2, repet, respos, respAd, quali = c(input$quali1, input$quali2), mcomp=input$mcomp5, sigT=sigT5, sigF=sigF5)
+
+#######################################################
+#           Análise de resíduo                       # 
+#######################################################
+
+plotres(fat2.ad.dic.model)
+
+```
+

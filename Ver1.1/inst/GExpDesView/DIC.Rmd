@@ -1,0 +1,72 @@
+---
+title: "DIC"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+
+  dataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    trata<-dataset[input$trat]
+    trat <- unlist(trata)
+    
+    
+    sigT <- as.numeric(input$sigT)
+    sigF <- as.numeric(input$sigF)
+    
+    if(input$quali==TRUE)
+      trat = as.factor(trat)
+    if(input$quali==FALSE)
+      trat = as.numeric(trat)
+    
+  dic.model=dic(trat, respos, quali=input$quali, nl=input$nl1, mcomp=input$mcomp, hvar=input$hvar, sigT=sigT, sigF=sigF)
+  
+```
+
+
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+
+str(dataset)
+summary(dataset)
+
+
+###############################################################
+#                    Tabela ANOVA DIC                         #  ###############################################################
+
+dic(trat, respos, quali=input$quali, nl=input$nl1, mcomp=input$mcomp, hvar=input$hvar, sigT=sigT, sigF=sigF)
+
+
+
+#######################################################
+#           Análise de resíduo                       # 
+#######################################################
+
+plotres(dic.model)
+```
+
+
+
+
+
+
+
+

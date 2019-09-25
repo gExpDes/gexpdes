@@ -1,0 +1,62 @@
+---
+title: "FATORIAL DUPLO COM UM TRATAMENTO ADICIONAL DBC"
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(shiny)
+library(nortest)
+library(car)
+library(ExpDes.pt)
+library(rmarkdown)
+
+
+    dataset=whichdataset()
+    respo<-dataset[input$resp]
+    respos <- unlist(respo)
+    bloco<-dataset[input$bloc]
+    blocos <- unlist(bloco)
+    fat<-dataset[input$fator1]
+    fat1 <- unlist(fat)
+    fato<-dataset[input$fator2]
+    fat2 <- unlist(fato)
+    respadi<-dataset[input$respad]
+    respAd <- unlist(respadi)
+    
+    sigT4 <- as.numeric(input$sigT4)
+    sigF4 <- as.numeric(input$sigF4)
+  
+  fat2.ad.dbc.model<- fat2.ad.dbc(fat1, fat2, blocos, respos, respAd, quali = c(input$quali1, input$quali2), mcomp=input$mcomp4, sigT=sigT4, sigF=sigF4)  
+    
+```
+
+
+
+```{r echo=TRUE}
+#######################################################
+#                    Dados                            # 
+#######################################################
+dataset
+
+
+#######################################################
+#              Estrutura dos dados                    # 
+#######################################################
+ summary(dataset)
+ str(dataset)
+ 
+
+#######################################################
+# Tabela ANOVA fat duplo com 1 trat adicional em DBC  #  #######################################################
+    
+fat2.ad.dbc(fat1, fat2, blocos, respos, respAd, quali = c(input$quali1, input$quali2), mcomp=input$mcomp4, sigT=sigT4, sigF=sigF4)
+
+#######################################################
+#     Análise de resíduo                              # 
+#######################################################
+
+plotres(fat2.ad.dbc.model)
+
+```
