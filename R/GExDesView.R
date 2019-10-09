@@ -10,7 +10,7 @@
 #'
 GExpDesView<- function(){
 
-  appDir<- system.file("GexpDesView",package = "GExpDes")
+  appDir<- system.file("GExpDesView",package = "GExpDes")
    if (appDir == "") {
     stop("Arquivos não encontrados. Tente instalar o `GExpDes`, novamente.", call. = FALSE)
   }

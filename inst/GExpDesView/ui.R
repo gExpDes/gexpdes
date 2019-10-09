@@ -142,7 +142,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                     ),
                     mainPanel(tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='560')),
                               tags$div( align="center",
-                                             HTML("Ver. 1.0 - 2019 - Desenvolvido por:"),
+                                             HTML("Ver. 1.0.1 - 2019 - Desenvolvido por:"),
                                              br(),
                                              HTML("- Rogerio Kormann - rogerio.kormann@ufsc.br"),
                                              br(),
@@ -259,7 +259,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -291,7 +291,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                           ),
                   br()
                 )
@@ -355,7 +355,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -424,7 +424,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -504,7 +504,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -581,7 +581,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -659,7 +659,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -736,7 +736,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -814,7 +814,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -892,7 +892,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -967,7 +967,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1- 2019")
                   ),
                   br()
 
@@ -1043,7 +1043,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -1118,7 +1118,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -1194,7 +1194,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -1269,7 +1269,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -1344,7 +1344,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
 
@@ -1418,7 +1418,7 @@ ui <-navbarPage("GExpDes", windowTitle = 'GExpDes', collapsible = TRUE, theme = 
                   hr(),
                   tags$div(align="center", valign="top", img(src='https://raw.githubusercontent.com/gExpDes/gexpdes/master/logo.png', width='160'), br()),
                   tags$div( align="center",
-                            HTML("Ver. 1.0 - 2019")
+                            HTML("Ver. 1.0.1 - 2019")
                   ),
                   br()
               )
