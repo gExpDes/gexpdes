@@ -39,6 +39,8 @@ Para instalar os pacotes descritos, copie os códigos abaixo e cole no terminal 
 
 **install.packages("shiny",dependencies=TRUE)**
 
+**install.packages("rtools",dependencies=TRUE)**
+
 **install.packages("shinythemes",dependencies=TRUE)**
 
 **install.packages("ExpDes.pt",dependencies=TRUE)**
@@ -58,6 +60,10 @@ Para instalar os pacotes descritos, copie os códigos abaixo e cole no terminal 
 **install.packages("stringr",dependencies=TRUE)**
 
 **install.packages("ds",dependencies=TRUE)**
+
+**install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.1.462.zip",
+                 repos = NULL)**
+
 
 ## **Passo 2 - Instale o pacote GExpDes e o labestData de acordo com o seu sistema operacional:**
 
