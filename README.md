@@ -65,6 +65,7 @@ Para instalar os pacotes descritos, copie os códigos abaixo e cole no terminal 
                  repos = NULL)**
 
 
+
 ## **Passo 2 - Instale o pacote GExpDes e o labestData de acordo com o seu sistema operacional:**
 
 ### Opção A - Instalação direta do pacote 
