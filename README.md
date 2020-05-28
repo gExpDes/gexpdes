@@ -24,8 +24,8 @@ Artigo do pacote publicado na Sigmae - [link](https://publicacoes.unifal-mg.edu.
 > Agradecimento especial João Vitor Berner Pereira (Agronomia)
 
 **Universidade Federal de Alfenas**
-- Eric Batista Ferreira
-- Denismar Alves Nogueira
+- Eric Batista Ferreira - eric.ferreira@unifal-mg.edu.br
+- Denismar Alves Nogueira - denismar.nogueira@unifal-mg.edu.br.
 
 # Instalação
 Para realizar a instalação do pacote gExpDes execute os passos 1 e 2 na sequência.
