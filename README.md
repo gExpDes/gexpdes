@@ -61,10 +61,6 @@ Para instalar os pacotes descritos, copie os códigos abaixo e cole no terminal 
 
 **install.packages("ds",dependencies=TRUE)**
 
-**install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.1.462.zip",
-                 repos = NULL)**
-
-
 
 ## **Passo 2 - Instale o pacote GExpDes e o labestData de acordo com o seu sistema operacional:**
 
