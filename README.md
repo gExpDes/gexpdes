@@ -27,9 +27,18 @@ Artigo do pacote publicado na Sigmae - [link](https://publicacoes.unifal-mg.edu.
 - Eric Batista Ferreira - eric.ferreira@unifal-mg.edu.br
 - Denismar Alves Nogueira - denismar.nogueira@unifal-mg.edu.br.
 
+# Deseja testar antes de instalar?
+
+Estamos preparando uma nova versão do GExpDes para que todos os recursos fiquem compatíveis com a nova versão do R.
+
+Caso queira testar a versão atual do GExpDes, disponibilizamos o seu acesso via servidor web.
+
+Para utilizá-la, por favor, acesse o endereço **gexpdes.ufsc.br**
+
+Após testar, caso deseje utilizá-la em sua máquina, siga para os procedimentos descritos abaixo.
+
 # Instalação
 Para realizar a instalação do pacote gExpDes execute os passos 1 e 2 na sequência.
-
 
 ## **Passo 1 - Instale os pacotes:**
 
