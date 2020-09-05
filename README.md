@@ -33,7 +33,7 @@ Estamos preparando uma nova versão do GExpDes para que todos os recursos fiquem
 
 Caso queira testar a versão atual do GExpDes, disponibilizamos o seu acesso via servidor web.
 
-Para utilizá-la, por favor, acesse o endereço **gexpdes.ufsc.br**
+Para utilizá-la, por favor, acesse o endereço [**gexpdes.ufsc.br**](gexpdes.ufsc.br)
 
 Após testar, caso deseje utilizá-la em sua máquina, siga para os procedimentos descritos abaixo.
 
